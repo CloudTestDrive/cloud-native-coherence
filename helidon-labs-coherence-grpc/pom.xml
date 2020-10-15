@@ -19,6 +19,9 @@
 	</parent>
 	<properties>
 		<mainClass>com.oracle.labs.helidon.coherencegrpc.Main</mainClass>
+		<version.lib.coherence>20.06</version.lib.coherence>
+		<version.plugin.jib>2.4.0</version.plugin.jib>
+		<version.lombok>1.18.12</version.lombok>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>coherence-grpc</artifactId>
@@ -50,8 +53,19 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.12</version>
+			<version>${version.lombok}</version>
 			<scope>provided</scope>
+		</dependency>
+		<!-- Coherence dependencies -->
+		<dependency>
+			<groupId>com.oracle.coherence.ce</groupId>
+			<artifactId>coherence-cdi-server</artifactId>
+			<version>${version.lib.coherence}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.coherence.ce</groupId>
+			<artifactId>coherence-mp-config</artifactId>
+			<version>${version.lib.coherence}</version>
 		</dependency>
 		<!-- SLF4J is a logging facade that let's us change the actual logger used 
 			under the covers without changing our code, slf4j-jdk14 is for output to 
@@ -147,7 +161,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
