@@ -37,7 +37,11 @@
 			<artifactId>helidon-security-abac-role</artifactId>
 			<version>${version.helidon}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>io.helidon.microprofile.grpc</groupId>
+			<artifactId>helidon-microprofile-grpc-client</artifactId>
+			<version>${version.helidon}</version>
+		</dependency>
 		<!-- runtime for the java bindings (no longer part of std java -->
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>

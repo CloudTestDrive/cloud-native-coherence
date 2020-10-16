@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oracle.labs.helidon.coherence.server;
+package com.oracle.labs.helidon.coherence.clients.test.grpc;
 
 import java.util.Set;
 
@@ -22,27 +22,19 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
-import org.eclipse.microprofile.openapi.annotations.info.Info;
-
-import com.oracle.labs.helidon.coherence.server.resources.CoherenceChargeGRPCResourceImpl;
-import com.oracle.labs.helidon.coherence.server.resources.CoherenceChargeRESTResourceImpl;
-import com.oracle.labs.helidon.coherence.server.resources.CoherenceStatsRESTResourceImpl;
-import com.oracle.labs.helidon.coherence.server.resources.StatusResource;
+import com.oracle.labs.helidon.coherence.clients.test.grpc.resources.CoherenceChargeGRPCTestResource;
 
 /**
  * Simple Application that produces a greeting message.
  */
 @ApplicationScoped
 @ApplicationPath("/")
-@OpenAPIDefinition(info = @Info(title = "CoherenceGRPCApplication", description = "Provides a simple billing update engine", version = "0.0.1"))
 
-public class CoherenceApplication extends Application {
+public class CoherenceChargeGRPCTestApplication extends Application {
 
 	@Override
 	public Set<Class<?>> getClasses() {
 		// here we have the classes to operate on
-		return Set.of(CoherenceChargeRESTResourceImpl.class, CoherenceChargeGRPCResourceImpl.class,
-				CoherenceStatsRESTResourceImpl.class, StatusResource.class);
+		return Set.of(CoherenceChargeGRPCTestResource.class);
 	}
 }

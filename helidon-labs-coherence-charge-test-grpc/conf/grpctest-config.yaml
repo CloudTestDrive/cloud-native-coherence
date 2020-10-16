@@ -1,0 +1,5 @@
+grpc:
+  channels:                
+    chargeserver:           
+      host: chargeserver      
+      port: 1408

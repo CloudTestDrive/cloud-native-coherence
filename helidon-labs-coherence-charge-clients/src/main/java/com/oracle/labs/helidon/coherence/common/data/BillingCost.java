@@ -1,5 +1,7 @@
 package com.oracle.labs.helidon.coherence.common.data;
 
+import java.io.Serializable;
+
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 import lombok.AllArgsConstructor;
@@ -10,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(name = "BillingCost", description = "Details of a Billing cost message", example = "{\"user\" : \"Fred\", \"charge\" : 0.5}")
-public class BillingCost {
+public class BillingCost implements Serializable {
 	private String user;
 	private Double charge;
 }
