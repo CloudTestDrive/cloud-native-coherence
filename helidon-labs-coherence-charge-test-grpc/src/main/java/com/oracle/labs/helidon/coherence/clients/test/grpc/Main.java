@@ -17,14 +17,12 @@
 package com.oracle.labs.helidon.coherence.clients.test.grpc;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
 import io.helidon.config.Config;
 import io.helidon.config.ConfigSources;
-import io.helidon.config.PollingStrategies;
 import io.helidon.config.spi.ConfigSource;
 import io.helidon.microprofile.server.Server;
 import lombok.extern.slf4j.Slf4j;
@@ -77,8 +75,7 @@ public final class Main {
 		// the
 		// config builder.
 		List<Supplier<? extends ConfigSource>> configSourcesToScan = new ArrayList<>(5);
-		configSourcesToScan.add(ConfigSources.file("conf/grpctest-config.yaml")
-				.pollingStrategy(PollingStrategies.regular(Duration.ofSeconds(5))).optional().build());
+		configSourcesToScan.add(ConfigSources.file("conf/grpctest-config.yaml").build());
 		configSourcesToScan.add(ConfigSources.file("confsecure/grpctest-security.yaml").build());
 		configSourcesToScan.add(ConfigSources.classpath("META-INF/microprofile-config.properties").build());
 		return Config.builder().sources(configSourcesToScan).build();
