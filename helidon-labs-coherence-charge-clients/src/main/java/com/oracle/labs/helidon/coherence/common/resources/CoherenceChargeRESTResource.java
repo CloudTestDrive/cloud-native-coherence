@@ -1,5 +1,6 @@
 package com.oracle.labs.helidon.coherence.common.resources;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -17,6 +18,7 @@ import io.helidon.security.annotations.Authenticated;
 
 @Path("/charge")
 @Authenticated
+@ApplicationScoped
 public interface CoherenceChargeRESTResource {
 	@PUT
 	@Produces(MediaType.APPLICATION_JSON)

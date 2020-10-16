@@ -1,6 +1,5 @@
 package com.oracle.labs.helidon.coherence.server.resources;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import com.oracle.coherence.cdi.Name;
@@ -10,7 +9,6 @@ import com.tangosol.net.NamedMap;
 
 import lombok.extern.slf4j.Slf4j;
 
-@ApplicationScoped
 @Slf4j
 public class CoherenceChargeRESTResourceImpl implements CoherenceChargeRESTResource {
 	@Inject
@@ -18,6 +16,7 @@ public class CoherenceChargeRESTResourceImpl implements CoherenceChargeRESTResou
 	private NamedMap<String, Double> billingInfo;
 	// private Map<String, Double> billingInfo = new HashMap<>() ;
 
+	@Override
 	public BillingCost updateCharges(BillingCost billingCost) {
 		log.info("CoherenceChargeRESTResourceImpl received billing request " + billingCost);
 		Double oldCost = billingInfo.get(billingCost.getUser());
