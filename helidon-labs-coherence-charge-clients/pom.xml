@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<properties>
+		<version.helidon>2.0.2</version.helidon>
+		<version.lab>${version.helidon}.0</version.lab>
+		<version.lombok>1.18.12</version.lombok>
+	</properties>
+	<groupId>com.oracle.labs.helidon</groupId>
+	<artifactId>coherence-charge-common</artifactId>
+	<version>${version.lab}</version>
+	<name>helidon-labs-coherence-charge-common</name>
+
+	<dependencies>
+		<!-- Lombok does the auto method creation -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${version.lombok}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.helidon.microprofile.openapi</groupId>
+			<artifactId>helidon-microprofile-openapi</artifactId>
+			<version>${version.helidon}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.helidon.security</groupId>
+			<artifactId>helidon-security-annotations</artifactId>
+			<version>${version.helidon}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.helidon.security.abac</groupId>
+			<artifactId>helidon-security-abac-role</artifactId>
+			<version>${version.helidon}</version>
+		</dependency>
+
+		<!-- runtime for the java bindings (no longer part of std java -->
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+	</dependencies>
+</project>

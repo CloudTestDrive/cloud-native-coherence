@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.oracle.labs.helidon</groupId>
+	<artifactId>coherence-charge-test-clients</artifactId>
+	<version>${version.lab}</version>
+	<properties>
+		<version.helidon>2.0.2</version.helidon>
+		<version.lab>${version.helidon}.0</version.lab>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.oracle.labs.helidon</groupId>
+			<artifactId>coherence-charge-common</artifactId>
+			<version>${version.lab}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.helidon.microprofile.rest-client</groupId>
+			<artifactId>helidon-microprofile-rest-client</artifactId>
+			<version>${version.helidon}</version>
+		</dependency>
+		<!-- brings in the json binsings -->
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		<!-- runtime for the java bindings (no longer part of std java -->
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		<!-- sets up the message readers for us -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>2.30</version>
+		</dependency>
+		<!-- so we can send it to JSON output for explanation of the structure -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.6</version>
+		</dependency>
+	</dependencies>
+</project>
