@@ -1,0 +1,5 @@
+#Coherence config
+coherence:
+  cluster: ChargeCluster
+  distributed:
+    localstorage: true

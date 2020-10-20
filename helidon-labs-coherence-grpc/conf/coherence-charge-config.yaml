@@ -1,3 +1,7 @@
 grpc:
   port: 1408
-#  name: chargeserver
+
+#Coherence config
+coherence:
+  distributed:
+    localstorage: false
