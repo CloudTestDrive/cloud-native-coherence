@@ -3,16 +3,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.oracle.labs.helidon</groupId>
-	<artifactId>coherence-charge-test-rest</artifactId>
+	<artifactId>coherence-charge-server-test-rest</artifactId>
 	<version>${version.lab}</version>
+	<name>${project.artifactId}</name>
 	<properties>
 		<version.helidon>2.0.2</version.helidon>
 		<version.lab>${version.helidon}.0</version.lab>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.oracle.labs.helidon</groupId>
-			<artifactId>coherence-charge-common</artifactId>
+			<artifactId>coherence-charge-server-common</artifactId>
 			<version>${version.lab}</version>
 		</dependency>
 		<dependency>

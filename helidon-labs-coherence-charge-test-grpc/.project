@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>helidon-labs-coherence-charge-test-grpc</name>
+	<name>helidon-labs-coherence-charge-server-test-grpc</name>
 	<comment></comment>
 	<projects>
 	</projects>

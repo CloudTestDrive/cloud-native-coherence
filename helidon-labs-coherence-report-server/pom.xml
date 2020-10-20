@@ -18,7 +18,7 @@
 		<version>2.0.2</version>
 	</parent>
 	<properties>
-		<mainClass>com.oracle.labs.helidon.coherence.server.Main</mainClass>
+		<mainClass>com.oracle.labs.helidon.coherence.charge.server.Main</mainClass>
 		<version.lib.coherence>20.06</version.lib.coherence>
 		<version.plugin.jib>2.4.0</version.plugin.jib>
 		<version.lombok>1.18.12</version.lombok>
@@ -34,16 +34,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.oracle.labs.helidon</groupId>
-			<artifactId>coherence-charge-server-common</artifactId>
+			<artifactId>coherence-report-server-common</artifactId>
 			<version>${version.lab}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.helidon.microprofile.bundles</groupId>
 			<artifactId>helidon-microprofile</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.helidon.microprofile.grpc</groupId>
-			<artifactId>helidon-microprofile-grpc-server</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss</groupId>

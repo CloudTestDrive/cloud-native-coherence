@@ -8,18 +8,20 @@
 		<version>2.0.2</version>
 	</parent>
 	<groupId>com.oracle.labs.helidon</groupId>
-	<artifactId>coherence-test-grpc</artifactId>
-	<name>coherence-charge-test-grpc</name>
+	<artifactId>coherence-charge-server-test-grpc</artifactId>
+	<name>${project.artifactId}</name>
 	<version>${version.lab}</version>
 	<properties>
 		<version.helidon>2.0.2</version.helidon>
 		<version.lab>${version.helidon}.0</version.lab>
 		<version.lombok>1.18.12</version.lombok>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.oracle.labs.helidon</groupId>
-			<artifactId>coherence-charge-common</artifactId>
+			<artifactId>coherence-charge-server-common</artifactId>
 			<version>${version.lab}</version>
 		</dependency>
 		<dependency>

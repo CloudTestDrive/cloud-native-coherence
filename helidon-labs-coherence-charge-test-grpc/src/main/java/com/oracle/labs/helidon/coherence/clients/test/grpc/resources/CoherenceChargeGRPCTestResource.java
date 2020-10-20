@@ -8,8 +8,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.oracle.labs.helidon.coherence.common.data.BillingCost;
-import com.oracle.labs.helidon.coherence.common.resources.CoherenceChargeGRPCResource;
+import com.oracle.labs.helidon.coherence.charge.common.data.BillingCost;
+import com.oracle.labs.helidon.coherence.charge.common.resources.CoherenceChargeGRPCResource;
 
 import io.helidon.microprofile.grpc.client.GrpcChannel;
 import io.helidon.microprofile.grpc.client.GrpcProxy;

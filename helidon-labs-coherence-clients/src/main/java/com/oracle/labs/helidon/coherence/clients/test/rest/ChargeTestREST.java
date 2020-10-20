@@ -7,8 +7,8 @@ import java.net.URI;
 
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
-import com.oracle.labs.helidon.coherence.common.data.BillingCost;
-import com.oracle.labs.helidon.coherence.common.resources.CoherenceChargeRESTResource;
+import com.oracle.labs.helidon.coherence.charge.common.data.BillingCost;
+import com.oracle.labs.helidon.coherence.charge.common.resources.CoherenceChargeRESTResource;
 
 public class ChargeTestREST {
 

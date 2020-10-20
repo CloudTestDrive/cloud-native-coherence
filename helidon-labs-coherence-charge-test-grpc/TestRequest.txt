@@ -1,0 +1,1 @@
+curl -i -u jack:password -d "{\"user\" : \"Fred\", \"charge\" : 0.5}" -H "Content-Type: application/json" -X PUT http://localhost:8090/charge

@@ -11,7 +11,7 @@
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
-	<artifactId>coherence-charge-server-common</artifactId>
+	<artifactId>coherence-report-server-common</artifactId>
 	<version>2.0.2.0</version>
 	<name>${project.artifactId}</name>
 
@@ -38,17 +38,11 @@
 			<artifactId>helidon-security-abac-role</artifactId>
 			<version>${version.helidon}</version>
 		</dependency>
-		<dependency>
-			<groupId>io.helidon.microprofile.grpc</groupId>
-			<artifactId>helidon-microprofile-grpc-client</artifactId>
-			<version>${version.helidon}</version>
-		</dependency>
 		<!-- runtime for the java bindings (no longer part of std java -->
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 			<version>2.3.2</version>
 		</dependency>
-
 	</dependencies>
 </project>

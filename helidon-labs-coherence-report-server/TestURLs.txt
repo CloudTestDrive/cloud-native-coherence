@@ -1,0 +1,8 @@
+Put a charge on the local resource with the charge server
+curl -i -u jack:password -d "{\"user\" : \"Fred\", \"charge\" : 0.5}" -H "Content-Type: application/json" -X PUT http://localhost:8082/charge
+
+Get the number of entries from the reporter (must use user jack)
+curl -i -u jack:password http://localhost:8083/report/count
+
+Get the data from the reporter (must use user jack)
+curl -i -u jack:password http://localhost:8083/report/data
