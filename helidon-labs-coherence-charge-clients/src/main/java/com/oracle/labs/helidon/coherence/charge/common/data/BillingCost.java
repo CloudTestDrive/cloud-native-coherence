@@ -13,9 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Schema(name = "BillingCost", description = "Details of a Billing cost message", example = "{\"user\" : \"Fred\", \"charge\" : 0.5}")
 public class BillingCost implements Serializable {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String user;
 	private Double charge;

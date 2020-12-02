@@ -25,8 +25,8 @@ import javax.ws.rs.core.Application;
 import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
 import org.eclipse.microprofile.openapi.annotations.info.Info;
 
-import com.oracle.labs.helidon.coherence.charge.server.resources.CoherenceChargeGRPCResourceImpl;
-import com.oracle.labs.helidon.coherence.charge.server.resources.CoherenceChargeRESTResourceImpl;
+import com.oracle.labs.helidon.coherence.charge.common.resources.CoherenceChargeRESTResource;
+import com.oracle.labs.helidon.coherence.charge.server.resources.CoherenceChargeGRPCResource;
 import com.oracle.labs.helidon.coherence.charge.server.resources.StatusResource;
 
 /**
@@ -41,7 +41,6 @@ public class CoherenceChargeApplication extends Application {
 	@Override
 	public Set<Class<?>> getClasses() {
 		// here we have the classes to operate on
-		return Set.of(CoherenceChargeRESTResourceImpl.class, CoherenceChargeGRPCResourceImpl.class,
-				StatusResource.class);
+		return Set.of(CoherenceChargeRESTResource.class, CoherenceChargeGRPCResource.class, StatusResource.class);
 	}
 }

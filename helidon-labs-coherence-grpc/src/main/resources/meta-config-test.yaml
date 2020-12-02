@@ -1,0 +1,35 @@
+sources:
+    - type: "environment-variables"
+    - type: "system-properties"
+    # This is a holding point to allow us to switch form the local Kafaka we're using for testing to a OCI stream for deployment
+    - type: "file"
+      properties:
+          path: "confsecure/oci-security-credentials.yaml"
+          optional: true
+    - type: "file"
+      properties:
+          path: "conf/streams-client-stream-config-local.yaml"
+          optional: true
+    - type: "file"
+      properties:
+          path: "conf/streams-client-stream-config-oci.yaml"
+          optional: true
+          # let's look for changes in this file
+          # for files, the change-watcher is better
+          # for other resource types the polling-strategy is needed
+          #change-watcher:
+          #  type: "file"
+          #  properties:
+          #    initial-delay-millis: 10000
+          #    delay-millis: 5000
+    - type: "file"
+      properties:
+          path: "conf/streams-client-network.yaml"
+          optional: true
+    - type: "file"
+      properties:
+          path: "confsecure/streams-client-security.yaml"
+          optional: true
+    - type: "classpath"
+      properties:
+          resource: "META-INF/microprofile-config.properties"

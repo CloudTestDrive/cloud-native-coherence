@@ -5,7 +5,6 @@ import javax.inject.Inject;
 
 import com.oracle.coherence.cdi.Name;
 import com.oracle.labs.helidon.coherence.charge.common.data.BillingCost;
-import com.oracle.labs.helidon.coherence.charge.common.resources.CoherenceChargeGRPCResource;
 import com.tangosol.net.NamedMap;
 
 import io.helidon.microprofile.grpc.core.Grpc;
@@ -15,13 +14,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Grpc(name = "charge")
 @ApplicationScoped
-public class CoherenceChargeGRPCResourceImpl implements CoherenceChargeGRPCResource {
+public class CoherenceChargeGRPCResource {
 	@Inject
 	@Name("Charges") // The name of the Map to setup.
 	private NamedMap<String, Double> billingInfo;
 	// private Map<String, Double> billingInfo = new HashMap<>() ;
 
-	@Override
 	@Unary(name = "update")
 	public BillingCost updateCharges(BillingCost billingCost) {
 		log.info("CoherenceChargeRESTResourceImpl received billing request " + billingCost);
